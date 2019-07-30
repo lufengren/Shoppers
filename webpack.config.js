@@ -2,7 +2,7 @@
  * @Author: Lucia
  * @Date: 2019-05-20 16:08:47
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-05-24 10:02:05
+ * @Last Modified time: 2019-07-29 16:28:19
  */
 
 const path = require('path');
@@ -25,7 +25,7 @@ module.exports = {
     mode: env,
     // entry: './src/page/index/index.js',
     entry: {
-        common: './src/page/common/index.js',
+        // common: './src/page/common/index.js',
         index: './src/page/index/index.js',
         login: './src/page/login/login.js'
     },
@@ -36,14 +36,15 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     externals: {
-        'jquery': 'window.jQuery'
+        'jquery': 'jQuery'
+    },
+    devServer: {
+        contentBase: './dist'
     },
     module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    {
+        rules: [{
+                test: /\.css$/i,
+                use: [{
                         loader: MiniCssExtractPlugin.loader
                     },
                     'css-loader'
@@ -68,7 +69,14 @@ module.exports = {
             }
         ]
     },
-
+    resolve: {
+        alias: {
+            util: path.resolve(__dirname, 'src/util/'),
+            page: path.resolve(__dirname, 'src/page/'),
+            service: path.resolve(__dirname, 'src/service/'),
+            image: path.resolve(__dirname, 'src/image/'),
+        }
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -79,4 +87,4 @@ module.exports = {
         new HtmlWebpackPlugin(configHtml('login'))
     ],
 
-}   
+}

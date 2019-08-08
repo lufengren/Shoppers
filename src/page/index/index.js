@@ -1,18 +1,28 @@
 import $ from 'jquery';
-import './style.css';
+import './index.css';
+import '../share/common.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 
-// function component() {
-//     const element = document.createElement('div');
-//     // Lodash, currently included via a script, is required for this line to work
-//     element.classList.add('hello');
-//     return element;
-// }
+import '../share/header-common/header-common';
+import {
+    init
+} from '../share/sidebar/sidebar';
+import {
+    utility
+} from 'util/util';
+import {
+    navbar
+} from '../share/navbar/navbar';
 
-// document.body.appendChild(component());
-const dataExchange = require('util/util.js');
-
-dataExchange.request({
+const template = '<div>{{name}}</div>';
+const data = {
+    name: 'Lucai'
+};
+init();
+utility.request({
     url: 'https://picsum.photos/v2/list',
+
     success: function (data, msg) {
         console.log(data, msg);
     },
@@ -20,5 +30,7 @@ dataExchange.request({
         console.log(msg);
     }
 });
+// console.log(utility.renderHtml(template, data));
 
-$('body').html('hello');
+// $('body').html('hello');
+navbar.menuClick();

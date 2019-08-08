@@ -1,0 +1,7 @@
+.message-wrapper {
+    flex: 1;
+}
+
+.message-content {
+    display: none;
+}

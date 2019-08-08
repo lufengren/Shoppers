@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!./share/head.html')%>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+    <%= require('html-loader!./share/header-simple.html')%>
+    <div class="message-wrapper pt-3">
+        <div class="container">
+            <div class="message-content register-success">
+                <div class="d-flex flex-column text-center">
+                    <h5>Successed Registerd</h5>
+                    <a href="#">Go Homepage</a>
+                </div>
+            </div>
+            <div class="message-content login-success">
+                <div class="d-flex flex-column text-center">
+                    <h5>Successed Login</h5>
+                    <a href="#">Go Homepage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./share/footer.html')%>
+</body>
+
+</html>

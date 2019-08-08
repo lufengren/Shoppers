@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <%= require('html-loader!./share/head.html')%>
+    <title><%= htmlWebpackPlugin.options.title %>n</title>
 </head>
 
 <body>
-    <%= require('html-loader!./share/jquery.html')%>
+    <h1>this is login page</h1>
+    <%= require('html-loader!./share/footer.html')%>
 </body>
 
 </html>

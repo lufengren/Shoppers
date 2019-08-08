@@ -1,0 +1,54 @@
+.nav-wrapper {
+    background: #282828;
+    color: white;
+}
+
+.nav-wrapper ul {
+    margin-bottom: 0;
+}
+
+.nav-wrapper ul li {
+    flex: 1;
+}
+
+.main-menu li {
+    text-align: center;
+}
+
+.responsive-menu {
+    display: none;
+}
+
+.responsive-menu a {
+    color: white;
+}
+
+.responsive-menu li {
+    padding-bottom: .2em;
+}
+
+.menu-icon {
+    display: inline-block;
+}
+
+.menu-icon-item {
+    display: block;
+    width: 1.125em;
+    height: .125em;
+    background: white;
+    margin-top: .2em;
+}
+
+@media only screen and (max-width:767px) {
+    .responsive-menu {
+        display: block;
+    }
+
+    .responsive-menu ul {
+        display: none;
+    }
+
+    .main-menu {
+        display: none;
+    }
+}

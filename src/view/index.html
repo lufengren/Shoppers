@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Management</title>
+    <%= require('html-loader!./share/head.html')%>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
 <body>
-    <%= require('html-loader!./share/jquery.html')%>
-    <h1>sgggddr</h1>
+    <%= require('html-loader!./share/header-common.html')%>
+    <%= require('html-loader!./share/navbar.html')%>
+    <div class="container index-content">
+        <div class="content-wrapper d-flex">
+            <%= require('html-loader!./share/sidebar.html')%>
+        </div>
+    </div>
+
+
+    <%= require('html-loader!./share/footer.html')%>
 </body>
 
 </html>

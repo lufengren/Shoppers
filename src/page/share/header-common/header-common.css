@@ -1,0 +1,66 @@
+/* common header style */
+.header-wrapper {
+    background: white;
+}
+
+.logo {
+    color: black;
+}
+
+.search {
+    flex-grow: 1;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.search-form {
+    border: solid 1px #f8f8f8;
+    border-radius: 15px;
+    background: #f0f0f0;
+}
+
+.search-form input {
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+    width: 100%;
+    font-size: 20px;
+}
+
+.search-button {
+    border: none;
+    background: #f0f0f0;
+}
+
+.fa-search {
+    color: #212529;
+}
+
+.info-notLogin {
+    display: inline-block;
+}
+
+.info-login {
+    display: none;
+}
+
+@media only screen and (max-width:767px) {
+    .header-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        flex-basis: 60%;
+    }
+
+    .search {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        order: 1;
+    }
+
+    .info {
+        flex-basis: 40%;
+    }
+}

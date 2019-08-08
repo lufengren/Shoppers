@@ -2,7 +2,7 @@
  * @Author: Lucia
  * @Date: 2019-05-20 16:08:47
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-07-29 16:28:19
+ * @Last Modified time: 2019-08-08 14:48:59
  */
 
 const path = require('path');
@@ -11,12 +11,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 let env = process.env.NODE_ENV == "development" ? "development" : "production";
 
-function configHtml(htmlName) {
+function configHtml(htmlName, title) {
     return {
         template: './src/view/' + htmlName + '.html',
         filename: 'view/' + htmlName + '.html',
         inject: true,
         hash: true,
+        title: title,
         chunks: ['common', htmlName]
     };
 }
@@ -27,7 +28,8 @@ module.exports = {
     entry: {
         // common: './src/page/common/index.js',
         index: './src/page/index/index.js',
-        login: './src/page/login/login.js'
+        login: './src/page/login/login.js',
+        message: './src/page/message/message.js'
     },
     devtool: 'inline-source-map',
     output: {
@@ -41,6 +43,12 @@ module.exports = {
     devServer: {
         contentBase: './dist'
     },
+    /* optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minSize: 0
+        }
+    }, */
     module: {
         rules: [{
                 test: /\.css$/i,
@@ -71,6 +79,7 @@ module.exports = {
     },
     resolve: {
         alias: {
+            nodeModules: path.resolve(__dirname, 'node_modules'),
             util: path.resolve(__dirname, 'src/util/'),
             page: path.resolve(__dirname, 'src/page/'),
             service: path.resolve(__dirname, 'src/service/'),
@@ -83,8 +92,9 @@ module.exports = {
             filename: 'css/[name].css',
             chunkFilename: 'css/[id].css'
         }),
-        new HtmlWebpackPlugin(configHtml('index')),
-        new HtmlWebpackPlugin(configHtml('login'))
+        new HtmlWebpackPlugin(configHtml('index', 'home')),
+        new HtmlWebpackPlugin(configHtml('login', 'login')),
+        new HtmlWebpackPlugin(configHtml('message', 'message'))
     ],
 
 }

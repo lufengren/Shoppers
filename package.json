@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.1",
-    "hogan.js": "^3.0.2"
+    "hogan.js": "^3.0.2",
+    "json-server": "^0.15.0"
   }
 }

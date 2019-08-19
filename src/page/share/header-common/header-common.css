@@ -4,7 +4,11 @@
 }
 
 .logo {
-    color: black;
+    color: rgb(245, 17, 103);
+}
+
+.logo:hover {
+    color: rgb(245, 17, 103);
 }
 
 .search {
@@ -42,6 +46,23 @@
 
 .info-login {
     display: none;
+}
+
+.login .username {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.sign-in {
+    cursor: pointer;
+}
+
+.sign-up {
+    cursor: pointer;
+}
+
+.logout {
+    cursor: pointer;
 }
 
 @media only screen and (max-width:767px) {

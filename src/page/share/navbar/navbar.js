@@ -7,14 +7,16 @@
 
 import './navbar.css';
 
-const navbar = {
-    menuClick: () => {
-        $('.responsive-menu').click(() => {
-            console.log('kquery tesy');
-            $('.responsive-menu ul').toggle();
-        });
-    }
-};
+function navBarInit() {
+    bindEvent();
+}
+
+function bindEvent() {
+    $('.responsive-menu').click(() => {
+        $('.responsive-menu ul').toggle();
+    });
+}
+
 export {
-    navbar
+    navBarInit
 }

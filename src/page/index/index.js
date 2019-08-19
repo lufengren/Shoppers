@@ -1,25 +1,32 @@
+/*
+ * @Author: Lucia 
+ * @Date: 2019-08-01 08:19:51 
+ * @Last Modified by: Lucia
+ * @Last Modified time: 2019-08-14 10:27:35
+ */
+
 import $ from 'jquery';
 import './index.css';
-import '../share/common.css';
-import '@fortawesome/fontawesome-free/css/all.css';
-import '@fortawesome/fontawesome-free/js/all.js';
+import '../share/index';
 
-import '../share/header-common/header-common';
 import {
-    init
+    headerCommonInit
+} from '../share/header-common/header-common';
+import {
+    navBarInit
+} from '../share/navbar/navbar';
+import {
+    sideBarInit
 } from '../share/sidebar/sidebar';
 import {
     utility
 } from 'util/util';
-import {
-    navbar
-} from '../share/navbar/navbar';
+
 
 const template = '<div>{{name}}</div>';
 const data = {
     name: 'Lucai'
 };
-init();
 utility.request({
     url: 'https://picsum.photos/v2/list',
 
@@ -30,7 +37,7 @@ utility.request({
         console.log(msg);
     }
 });
-// console.log(utility.renderHtml(template, data));
 
-// $('body').html('hello');
-navbar.menuClick();
+headerCommonInit();
+navBarInit();
+sideBarInit();

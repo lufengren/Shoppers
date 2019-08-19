@@ -1,0 +1,44 @@
+.index-content {
+    flex: 1;
+}
+
+.shipping-address {
+    flex-basis: 70%;
+}
+
+.shipping-address-nav a:hover {
+    color: rgb(245, 17, 103);
+}
+
+.shipping-address header {
+    font-size: 20px;
+    border-bottom: 1px solid rgb(245, 17, 103);
+}
+
+.shipping-address header span {
+    color: rgb(245, 17, 103);
+}
+
+.shipping-address .edit {
+    cursor: pointer;
+}
+
+.shipping-address-detail label {
+    width: 30%;
+}
+
+input[type='text'] {
+    width: 60%;
+    height: 30px;
+}
+
+input[type='password'] {
+    width: 60%;
+    height: 30px;
+}
+
+@media only screen and (max-width:767px) {
+    .shipping-address {
+        flex-basis: 100%;
+    }
+}

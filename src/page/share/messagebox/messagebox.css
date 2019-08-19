@@ -1,0 +1,9 @@
+.message-box {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(245, 17, 103);
+    color: white;
+    height: 35px;
+    display: none;
+}

@@ -3,15 +3,12 @@
     color: white;
 }
 
-.nav-wrapper ul {
+.main-menu ul {
     margin-bottom: 0;
 }
 
-.nav-wrapper ul li {
+.main-menu ul li {
     flex: 1;
-}
-
-.main-menu li {
     text-align: center;
 }
 

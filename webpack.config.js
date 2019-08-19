@@ -2,7 +2,7 @@
  * @Author: Lucia
  * @Date: 2019-05-20 16:08:47
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-08 14:48:59
+ * @Last Modified time: 2019-08-15 13:50:51
  */
 
 const path = require('path');
@@ -26,10 +26,15 @@ module.exports = {
     mode: env,
     // entry: './src/page/index/index.js',
     entry: {
-        // common: './src/page/common/index.js',
         index: './src/page/index/index.js',
         login: './src/page/login/login.js',
-        message: './src/page/message/message.js'
+        register: './src/page/register/register.js',
+        forgetPassword: './src/page/forgetPassword/forgetPassword.js',
+        message: './src/page/message/message.js',
+        profile: './src/page/profile/profile.js',
+        shippingaddress: './src/page/shippingaddress/shippingaddress.js',
+        order: './src/page/order/order.js',
+        about: './src/page/About/about.js'
     },
     devtool: 'inline-source-map',
     output: {
@@ -74,6 +79,10 @@ module.exports = {
                 use: [
                     'file-loader'
                 ]
+            },
+            {
+                test: /\.string$/,
+                loader: 'html-loader'
             }
         ]
     },
@@ -93,8 +102,13 @@ module.exports = {
             chunkFilename: 'css/[id].css'
         }),
         new HtmlWebpackPlugin(configHtml('index', 'home')),
+        new HtmlWebpackPlugin(configHtml('message', 'message')),
         new HtmlWebpackPlugin(configHtml('login', 'login')),
-        new HtmlWebpackPlugin(configHtml('message', 'message'))
+        new HtmlWebpackPlugin(configHtml('register', 'register')),
+        new HtmlWebpackPlugin(configHtml('forgetPassword', 'forgetPassword')),
+        new HtmlWebpackPlugin(configHtml('profile', 'profile')),
+        new HtmlWebpackPlugin(configHtml('shippingaddress', 'shippingaddress')),
+        new HtmlWebpackPlugin(configHtml('order', 'order')),
+        new HtmlWebpackPlugin(configHtml('About', 'About')),
     ],
-
-}
+};

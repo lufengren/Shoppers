@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "username": "lucialu",
+      "password": "123123123",
+      "email": "lucailu@gmail.com",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "username": "lili",
+      "password": "bbbbbbb"
+    }
+  ],
+  "shippings": [
+    {
+      "firstname": "sdf11",
+      "lastname": "sdre",
+      "phone": "1231231234",
+      "address": "sdfdsfdsfdsf",
+      "city": "samma",
+      "state": "WV",
+      "zipcode": "111",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

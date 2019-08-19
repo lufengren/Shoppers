@@ -2,11 +2,11 @@
  * @Author: Lucia
  * @Date: 2019-05-26 16:21:30
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-08 15:34:47
+ * @Last Modified time: 2019-08-15 17:02:03
  */
 'use strict';
 const conf = {
-    host: ''
+    host: 'http://localhost:3000'
 };
 var hogan = require('hogan.js');
 const utility = {
@@ -26,7 +26,7 @@ const utility = {
                 else if (res.status === 10) {
                     _this.doLogin();
                 }
-                // the request is successfull, but the response data is not correct
+                // the request is successfull, but the response has something wrong
                 else if (res.status === 1) {
                     typeof param.error === 'function' && param.error(res.msg);
                 }
@@ -38,7 +38,7 @@ const utility = {
         });
     },
     // if server address is changed, only need to change the host name 
-    getSeverUrl: function (path) {
+    getServerUrl: function (path) {
         return conf.host + path;
     },
     getUrlParamByKey: function (key) {
@@ -54,11 +54,13 @@ const utility = {
     },
     validate: function (value, type) {
         value = $.trim(value);
-        if (type === 'require') {
+        if (type === 'required') {
             return !!value;
         }
         if (type === 'phone') {
-            return / ^\d{3}\d{3}\d{4}$/.test(value);
+            // return / ^\d{3}\d{3}\d{4}$/.test(value);
+            let pattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+            return pattern.test(value);
         }
         if (type === 'email') {
             return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);

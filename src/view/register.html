@@ -9,9 +9,9 @@
 <body>
     <div class="container">
         <%= require('html-loader!./share/header-simple.html')%>
-        <div class="login-wrapper d-flex">
-            <div class="login-img"></div>
-            <div class="login-form d-flex flex-column justify-content-center align-items-center
+        <div class="register-wrapper d-flex">
+            <div class="register-img"></div>
+            <div class="register-form d-flex flex-column justify-content-center align-items-center
             ">
                 <h3 class="mb-5">Welcome</h3>
                 <form action="">
@@ -21,27 +21,31 @@
                         </span>
                         <span class="error-msg"></span>
                     </div>
-                    <div class="login-item py-3">
+                    <div class="register-item py-3">
+                        <label for="username">
+                            <span><i class="far fa-user"></i></span>
+                        </label>
+                        <input type="text" id="username" class="username pl-3" placeholder="User name">
+                    </div>
+                    <div class="register-item py-3">
                         <label for="email">
                             <span><i class="far fa-envelope"></i></span>
                         </label>
-                        <input type="text" id="email" class="email pl-3" placeholder="email">
+                        <input type="text" id="email" class="email pl-3" placeholder="Email">
                     </div>
-                    <div class="login-item py-3">
+                    <div class="register-item py-3">
                         <label for="password">
                             <span><i class="fas fa-lock"></i></span>
                         </label>
                         <input type="password" id="password" class="password pl-3" placeholder="Password">
                         <span class="password-img"><i class="fas fa-eye-slash"></i></span>
                     </div>
-                    <div class="text-right">
-                        <a href="./passwordreset.html">Forget Password?</a>
-                    </div>
-                    <div class="login-submit text-center pt-2">
-                        <button type="button" class="btn">Sign in</button>
+
+                    <div class="register-submit text-center pt-2">
+                        <button type="button" class="btn register-btn">Sign up</button>
                     </div>
                     <div class="text-center pt-3">
-                        <span>Dont't have an account?</span><a href="./register.html">Sign up</a>
+                        <span>Already have an account?</span><a href="./login.html">Sign in</a>
                     </div>
                 </form>
             </div>

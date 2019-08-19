@@ -3,5 +3,9 @@
 }
 
 .logo {
-    color: black;
+    color: rgb(245, 17, 103);
+}
+
+.logo:hover {
+    color: rgb(245, 17, 103);
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!./share/head.html')%>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+    <%= require('html-loader!./share/messagebox.html')%>
+    <%= require('html-loader!./share/header-common.html')%>
+    <%= require('html-loader!./share/navbar.html')%>
+    <div class="container index-content">
+        <div class="content-wrapper d-flex flex-wrap">
+            <%= require('html-loader!./share/sidebar.html')%>
+            <div class="shipping-address d-flex flex-column py-3">
+                <div class="shipping-address-nav"><a href="./index.html">Home</a> >> Shipping Address</div>
+                <div class="shipping-address-content">
+                    <div class="loading">
+                    </div>
+                </div>
+                <!-- <div class="shipping-billing py-2">
+                    <span class="pr-2"> Are shipping and billing address the same ?</span>
+                    <input type="radio" name="shipping-billing-address" id="yes" checked>
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="shipping-billing-address" id="no">
+                    <label for="no">No</label>
+                </div> -->
+                <div class="submit-info py-2">
+                    <button class="btn save-btn" disabled>
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./share/footer.html')%>
+</body>
+
+</html>

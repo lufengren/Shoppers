@@ -9,32 +9,33 @@
 <body>
     <%= require('html-loader!./share/messagebox.html')%>
     <%= require('html-loader!./share/header-common.html')%>
-    <%= require('html-loader!./share/navbar.html')%>
-    <div class="container index-content">
-        <div class="content-wrapper d-flex flex-wrap">
-            <%= require('html-loader!./share/sidebar.html')%>
-            <div class="profile d-flex flex-column py-3">
-                <div class="profile-nav"><a href="./index.html">Home</a> >> Profile</div>
-                <div class="profile-content">
-                    <div class="loading">
+    <div class="content pb-3">
+        <%= require('html-loader!./share/navbar.html')%>
+        <div class="container pt-3 index-content">
+            <div class="content-wrapper d-flex flex-wrap">
+                <%= require('html-loader!./share/sidebar.html')%>
+                <div class="profile d-flex flex-column py-3">
+                    <div class="profile-nav"><a href="./index.html">Home</a> >> Profile</div>
+                    <div class="profile-content">
+                        <div class="loading">
+                        </div>
                     </div>
-                </div>
-                <!-- <div class="shipping-address py-2">
+                    <!-- <div class="shipping-address py-2">
                     <span class="pr-2"> Are shipping and billing address the same ?</span>
                     <input type="radio" name="shipping-billing-address" id="yes" checked>
                     <label for="yes">Yes</label>
                     <input type="radio" name="shipping-billing-address" id="no">
                     <label for="no">No</label>
                 </div> -->
-                <div class="submit-info py-2 text-center">
-                    <button class="btn save-btn" disabled>
-                        Save
-                    </button>
+                    <div class="submit-info py-2 text-center">
+                        <button class="btn save-btn" disabled>
+                            Save
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- <div>
             <div class="billing-group py-2">
                     <label>

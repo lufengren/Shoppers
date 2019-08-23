@@ -7,47 +7,49 @@
 </head>
 
 <body>
-    <div class="container">
-        <%= require('html-loader!./share/header-simple.html')%>
-        <div class="register-wrapper d-flex">
-            <div class="register-img"></div>
-            <div class="register-form d-flex flex-column justify-content-center align-items-center
+    <%= require('html-loader!./share/header-simple.html')%>
+    <div class="content pb-3">
+        <div class="container">
+            <div class="register-wrapper d-flex">
+                <div class="register-img"></div>
+                <div class="register-form d-flex flex-column justify-content-center align-items-center
             ">
-                <h3 class="mb-5">Welcome</h3>
-                <form action="">
-                    <div class="error-wrapper py-1">
-                        <span>
-                            <i class="fas fa-exclamation-circle"></i>
-                        </span>
-                        <span class="error-msg"></span>
-                    </div>
-                    <div class="register-item py-3">
-                        <label for="username">
-                            <span><i class="far fa-user"></i></span>
-                        </label>
-                        <input type="text" id="username" class="username pl-3" placeholder="User name">
-                    </div>
-                    <div class="register-item py-3">
-                        <label for="email">
-                            <span><i class="far fa-envelope"></i></span>
-                        </label>
-                        <input type="text" id="email" class="email pl-3" placeholder="Email">
-                    </div>
-                    <div class="register-item py-3">
-                        <label for="password">
-                            <span><i class="fas fa-lock"></i></span>
-                        </label>
-                        <input type="password" id="password" class="password pl-3" placeholder="Password">
-                        <span class="password-img"><i class="fas fa-eye-slash"></i></span>
-                    </div>
+                    <h3 class="mb-5">Welcome</h3>
+                    <form action="">
+                        <div class="error-wrapper py-1">
+                            <span>
+                                <i class="fas fa-exclamation-circle"></i>
+                            </span>
+                            <span class="error-msg"></span>
+                        </div>
+                        <div class="register-item py-3">
+                            <label for="username">
+                                <span><i class="far fa-user"></i></span>
+                            </label>
+                            <input type="text" id="username" class="username pl-3" placeholder="User name">
+                        </div>
+                        <div class="register-item py-3">
+                            <label for="email">
+                                <span><i class="far fa-envelope"></i></span>
+                            </label>
+                            <input type="text" id="email" class="email pl-3" placeholder="Email">
+                        </div>
+                        <div class="register-item py-3">
+                            <label for="password">
+                                <span><i class="fas fa-lock"></i></span>
+                            </label>
+                            <input type="password" id="password" class="password pl-3" placeholder="Password">
+                            <span class="password-img"><i class="fas fa-eye-slash"></i></span>
+                        </div>
 
-                    <div class="register-submit text-center pt-2">
-                        <button type="button" class="btn register-btn">Sign up</button>
-                    </div>
-                    <div class="text-center pt-3">
-                        <span>Already have an account?</span><a href="./login.html">Sign in</a>
-                    </div>
-                </form>
+                        <div class="register-submit text-center pt-2">
+                            <button type="button" class="btn register-btn">Sign up</button>
+                        </div>
+                        <div class="text-center pt-3">
+                            <span>Already have an account?</span><a href="./login.html">Sign in</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

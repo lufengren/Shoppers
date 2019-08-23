@@ -9,10 +9,12 @@
 <body>
     <%= require('html-loader!./share/header-common.html')%>
     <%= require('html-loader!./share/navbar.html')%>
-    <div class="container index-content">
-        <div class="content-wrapper d-flex flex-wrap">
-            <%= require('html-loader!./share/sidebar.html')%>
-            <div>this is order</div>
+    <div class="content pb-3">
+        <div class="container pt-3 index-content">
+            <div class="content-wrapper d-flex flex-wrap">
+                <%= require('html-loader!./share/sidebar.html')%>
+                <div>this is order</div>
+            </div>
         </div>
     </div>
     <%= require('html-loader!./share/footer.html')%>

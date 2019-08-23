@@ -2,7 +2,7 @@
  * @Author: Lucia
  * @Date: 2019-05-20 16:08:47
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-15 13:50:51
+ * @Last Modified time: 2019-08-20 17:04:19
  */
 
 const path = require('path');
@@ -34,7 +34,8 @@ module.exports = {
         profile: './src/page/profile/profile.js',
         shippingaddress: './src/page/shippingaddress/shippingaddress.js',
         order: './src/page/order/order.js',
-        about: './src/page/About/about.js'
+        about: './src/page/About/about.js',
+        product: './src/page/product/product.js'
     },
     devtool: 'inline-source-map',
     output: {
@@ -84,6 +85,12 @@ module.exports = {
                 test: /\.string$/,
                 loader: 'html-loader'
             }
+            // {
+            //     test: /\.(html)$/,
+            //     use: {
+            //         loader: 'html-loader',
+            //     }
+            // }
         ]
     },
     resolve: {
@@ -110,5 +117,6 @@ module.exports = {
         new HtmlWebpackPlugin(configHtml('shippingaddress', 'shippingaddress')),
         new HtmlWebpackPlugin(configHtml('order', 'order')),
         new HtmlWebpackPlugin(configHtml('About', 'About')),
+        new HtmlWebpackPlugin(configHtml('product', 'product')),
     ],
 };

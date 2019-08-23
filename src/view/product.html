@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!./share/head.html')%>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+    <%= require('html-loader!./share/header-common.html')%>
+    <%= require('html-loader!./share/navbar.html')%>
+    <div class="content pb-3">
+        <div class="container pt-3">
+            <div><a href="./index.html">Home</a> >> Search results</div>
+            <div class="sort d-flex my-2">
+                <div class="sort-by-default active">default</div>
+                <div class="sort-by-price">
+                    <span>price</span>
+                    <i class="fas fa-sort-up"></i>
+                    <i class="fas fa-sort-down"></i>
+                </div>
+            </div>
+            <div class="product-content">
+                <div class="loading">
+                </div>
+            </div>
+            <div class="pagination">
+
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./share/footer.html')%>
+</body>
+
+</html>

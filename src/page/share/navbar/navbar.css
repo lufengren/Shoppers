@@ -12,8 +12,43 @@
     text-align: center;
 }
 
+.main-menu>ul>li {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.main-menu>ul>li>a {
+    color: white;
+}
+
+.main-menu>ul>li:hover .dropdown-box {
+    display: block;
+}
+
+.dropdown-box a:hover {
+    color: rgb(245, 17, 103);
+}
+
+
+.dropdown-box {
+    position: absolute;
+    z-index: 9;
+    box-shadow: 0 3px 5px rgb(245, 17, 103);
+    width: 100%;
+    display: none;
+}
+
+.sub-menu li {
+    line-height: 2;
+}
+
 .responsive-menu {
     display: none;
+}
+
+.fa-chevron-down {
+    font-size: 12px;
 }
 
 .responsive-menu a {

@@ -15,7 +15,7 @@ li {
 }
 
 img {
-    display: block;
+    display: inline-block;
     border: none;
 }
 
@@ -50,6 +50,7 @@ a {
 
 a:hover {
     text-decoration: none;
+    color: inherit;
 }
 
 /* button style */
@@ -75,10 +76,23 @@ a:hover {
     padding: 0 10px;
 }
 
+button {
+    outline: none;
+}
+
 /* loading style */
 .loading {
     margin: 10px auto;
     background: url('../../image/loading.gif') no-repeat;
     width: 65px;
     height: 65px;
+}
+
+.content {
+    flex: 1;
+}
+
+.active {
+    color: white;
+    background: rgb(245, 17, 103) !important;
 }

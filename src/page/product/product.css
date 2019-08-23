@@ -1,11 +1,28 @@
-.slide-show {
-    width: 100%;
-    /* min-height: 400px; */
-    background: lightblue;
+.sort-flag {
+    opacity: .6;
 }
 
-.slide-show img {
-    max-width: 100%;
+.sort>div {
+    width: 100px;
+    border: 1px solid rgb(245, 17, 103);
+    text-align: center;
+    cursor: pointer;
+}
+
+.sort-by-default {
+    background: white;
+}
+
+.sort-by-price {
+    background: white;
+    position: relative;
+    margin-left: -1px;
+}
+
+.fa-sort-down {
+    position: absolute;
+    top: 5px;
+    right: 24px;
 }
 
 .list {

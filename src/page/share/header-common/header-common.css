@@ -34,6 +34,7 @@
 .search-button {
     border: none;
     background: #f0f0f0;
+    outline: none;
 }
 
 .fa-search {

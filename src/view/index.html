@@ -9,9 +9,81 @@
 <body>
     <%= require('html-loader!./share/header-common.html')%>
     <%= require('html-loader!./share/navbar.html')%>
-    <div class="container index-content">
-        <div class="content-wrapper d-flex">
-            <%= require('html-loader!./share/sidebar.html')%>
+    <div class="content pb-3">
+        <div class="content-wrapper d-flex flex-wrap">
+            <div class="slide-show">
+                <div class="slide-show-content">
+                    <div><img src='<%=require("../image/slider1-2x.jpg")%>' alt=""></div>
+                    <div><img src='<%=require("../image/slider2-2x.jpg")%>' alt=""></div>
+                    <div><img src='<%=require("../image/slider3-2x.jpg")%>' alt=""></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="list">
+                    <div class="item d-flex flex-column">
+                        <a href="#" class="text-center">
+                            <img src='<%=require("../image/list.jpg")%>' alt="">
+                            <span><i class="fas fa-shopping-bag"></i></span>
+                        </a>
+                        <div class="description">
+                            <span>sdfwe dfgfd wer3 dfg</span>
+                        </div>
+                        <div class="price">
+                            $234
+                        </div>
+                    </div>
+                    <div class="item d-flex flex-column">
+                        <a href="#" class="text-center">
+                            <img src='<%=require("../image/list.jpg")%>'>
+                            <span><i class="fas fa-shopping-bag"></i></span>
+                        </a>
+                        <div class="description">
+                            <span>sdfwe dfgfd wer3 dfg</span>
+                        </div>
+                        <div class="price">
+                            $234
+                        </div>
+                    </div>
+                    <div class="item d-flex flex-column">
+                        <a href="#" class="text-center">
+                            <img src='<%=require("../image/list.jpg")%>'>
+                            <span><i class="fas fa-shopping-bag"></i></span>
+                        </a>
+                        <div class="description">
+                            <span>sdfwe dfgfd wer3 dfg</span>
+                        </div>
+                        <div class="price">
+                            $234
+                        </div>
+                    </div>
+                    <div class="item d-flex flex-column">
+                        <a href="#" class="text-center">
+                            <img src='<%=require("../image/list.jpg")%>'>
+                            <span><i class="fas fa-shopping-bag"></i></span>
+                        </a>
+                        <div class="description">
+                            <span>sdfwe dfgfd wer3 dfg</span>
+                        </div>
+                        <div class="price">
+                            $234
+                        </div>
+
+                    </div>
+                    <div class="item d-flex flex-column">
+                        <a href="#" class="text-center">
+                            <img src='<%=require("../image/list.jpg")%>'>
+                            <span><i class="fas fa-shopping-bag"></i></span>
+                        </a>
+                        <div class="description">
+                            <span>sdfwe dfgfd wer3 dfg</span>
+                        </div>
+                        <div class="price">
+                            $234
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <%= require('html-loader!./share/footer.html')%>

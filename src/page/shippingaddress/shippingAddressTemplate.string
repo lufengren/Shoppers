@@ -1,4 +1,4 @@
-<div class="shipping-address-detail">
+<div class="shipping-address-detail py-3">
     <header class="py-2"> Shipping Address <span class="pl-2 edit"><i class="far fa-edit"></i></span></header>
     <div class="form-group py-2">
         <label for="firstname"> First Name </label>

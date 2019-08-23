@@ -1,6 +1,5 @@
 {
-  "users": [
-    {
+  "users": [{
       "username": "lucialu",
       "password": "123123123",
       "email": "lucailu@gmail.com",
@@ -12,19 +11,31 @@
       "password": "bbbbbbb"
     }
   ],
-  "shippings": [
+  "shippings": [{
+    "firstname": "sdf11",
+    "lastname": "sdre",
+    "phone": "1231231234",
+    "address": "sdfdsfdsfdsf",
+    "city": "samma",
+    "state": "WV",
+    "zipcode": "111",
+    "id": 1
+  }],
+  "products": [{
+      "id": 1,
+      "categoryId": 3,
+      "name": "iphoneX",
+      "subtitle": "black friday on sale",
+      "status": 1,
+      "price": 999
+    },
     {
-      "firstname": "sdf11",
-      "lastname": "sdre",
-      "phone": "1231231234",
-      "address": "sdfdsfdsfdsf",
-      "city": "samma",
-      "state": "WV",
-      "zipcode": "111",
-      "id": 1
+      "id": 2,
+      "categoryId": 2,
+      "name": "iphone7",
+      "subtitle": "black friday on sale",
+      "status": 1,
+      "price": 799
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

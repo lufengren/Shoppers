@@ -35,7 +35,7 @@ class Pagination {
         let endPage = this.options.pageNumber + this.options.pageRange > this.options.pages ? this.options.pages : this.options.pageNumber + this.options.pageRange;
         // bind data to pagination array
         paginationData.push({
-            name: '<<',
+            name: '<',
             value: this.options.prePage,
             disabled: !this.options.hasPreviousPage
         })
@@ -47,7 +47,7 @@ class Pagination {
             })
         }
         paginationData.push({
-            name: '>>',
+            name: '>',
             value: this.options.nextPage,
             disabled: !this.options.hasNextPage
         })

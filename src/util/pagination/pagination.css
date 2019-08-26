@@ -1,0 +1,8 @@
+.pagination .page-item {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    line-height: 40px;
+}

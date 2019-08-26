@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-08-20 17:05:04 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-22 17:06:21
+ * @Last Modified time: 2019-08-22 22:06:28
  */
 
 import '../share/index';
@@ -86,6 +86,14 @@ const productPage = {
                 lists: res
             });
             $('.product-content').html(productHtml);
+            res = {
+                pages: 8,
+                pageNumber: 4,
+                prePage: 3,
+                nextPage: 5,
+                hasPreviousPage: true,
+                hasNextPage: true,
+            }
             _this.loadPagination(res);
         }, (errMsg) => {
             utility.errorMsg(errMsg);

@@ -5,4 +5,9 @@
     border: 1px solid #e6e6e6;
     border-radius: 50%;
     line-height: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

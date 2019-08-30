@@ -77,7 +77,7 @@ a:hover {
 }
 
 button {
-    outline: none;
+    outline: none !important;
 }
 
 /* loading style */
@@ -95,4 +95,9 @@ button {
 .active {
     color: white;
     background: rgb(245, 17, 103) !important;
+}
+
+.disabled {
+    color: #e6e6e6 !important;
+    cursor: not-allowed !important;
 }

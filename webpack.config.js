@@ -2,7 +2,7 @@
  * @Author: Lucia
  * @Date: 2019-05-20 16:08:47
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-20 17:04:19
+ * @Last Modified time: 2019-08-29 21:45:18
  */
 
 const path = require('path');
@@ -35,7 +35,8 @@ module.exports = {
         shippingaddress: './src/page/shippingaddress/shippingaddress.js',
         order: './src/page/order/order.js',
         about: './src/page/About/about.js',
-        product: './src/page/product/product.js'
+        product: './src/page/product/product.js',
+        productdetail: './src/page/productdetail/productdetail.js'
     },
     devtool: 'inline-source-map',
     output: {
@@ -70,8 +71,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'images',
-                        publicPath: '../images/'
+                        outputPath: 'image',
+                        publicPath: '../image/'
                     },
                 }],
             },
@@ -81,10 +82,6 @@ module.exports = {
                     'file-loader'
                 ]
             },
-            {
-                test: /\.string$/,
-                loader: 'html-loader'
-            }
             // {
             //     test: /\.(html)$/,
             //     use: {
@@ -118,5 +115,6 @@ module.exports = {
         new HtmlWebpackPlugin(configHtml('order', 'order')),
         new HtmlWebpackPlugin(configHtml('About', 'About')),
         new HtmlWebpackPlugin(configHtml('product', 'product')),
+        new HtmlWebpackPlugin(configHtml('productdetail', 'productdetail'))
     ],
 };

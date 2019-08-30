@@ -1,8 +1,17 @@
+/*
+ * @Author: Lucia 
+ * @Date: 2019-08-23 10:08:12 
+ * @Last Modified by: Lucia
+ * @Last Modified time: 2019-08-29 16:14:31
+ */
+
 import './pagination.css';
 import {
     utility
 } from 'util/util';
-const paginationTemplate = require('./pagination.string');
+import {
+    paginationTemplate
+} from './paginationTemplate.js';
 
 class Pagination {
     constructor() {
@@ -17,6 +26,7 @@ class Pagination {
                 return;
             }
             if (typeof _this.options.clickEvent === 'function') {
+                console.log('hithit');
                 _this.options.clickEvent($this.data('value'));
             }
         })

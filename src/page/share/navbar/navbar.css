@@ -39,8 +39,16 @@
     display: none;
 }
 
+.sub-menu {
+    background: #282828;
+}
+
 .sub-menu li {
     line-height: 2;
+}
+
+.sub-menu li a {
+    color: white;
 }
 
 .responsive-menu {

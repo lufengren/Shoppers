@@ -16,6 +16,14 @@ const productService = {
             success: resolve,
             error: reject
         });
+    },
+    getProductById: function (id, resolve, reject) {
+        $.ajax({
+            type: 'get',
+            url: `http://localhost:3000/products/${id}`,
+            success: resolve,
+            error: reject
+        });
     }
 };
 export {

@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-08-20 17:05:04 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-22 22:06:28
+ * @Last Modified time: 2019-08-29 21:17:30
  */
 
 import '../share/index';
@@ -26,9 +26,10 @@ import {
 import {
     navBarInit
 } from '../share/navbar/navbar';
+import {
+    productTemplate
+} from './productTemplate';
 
-
-const productTemplate = require('./productTemplate.string');
 const productPage = {
     searchData: {
         keyword: utility.getUrlParamByKey('keyword') || '',
@@ -85,22 +86,24 @@ const productPage = {
             let productHtml = utility.renderHtml(productTemplate, {
                 lists: res
             });
-            $('.product-content').html(productHtml);
+            $productContentElement.html(productHtml);
             res = {
-                pages: 8,
-                pageNumber: 4,
+                pages: 2,
+                pageNumber: 1,
                 prePage: 3,
                 nextPage: 5,
-                hasPreviousPage: true,
-                hasNextPage: true,
+                hasPreviousPage: false,
+                hasNextPage: false,
             }
             _this.loadPagination(res);
         }, (errMsg) => {
+            console.log(errMsg);
             utility.errorMsg(errMsg);
         });
     },
     // accept pagenation prama then render pagenation html
     loadPagination: function (res) {
+        let _this = this;
         let productPagination = new Pagination();
         productPagination.render({
             pages: res.pages,
@@ -112,13 +115,18 @@ const productPage = {
             container: $('.pagination'),
             clickEvent: function (pageNumber) {
                 console.log(pageNumber);
-                this.searchData.pageNumber = pageNumber;
-                this.loadProducts();
+                _this.searchData.pageNumber = pageNumber;
+                _this.loadProducts();
             }
         })
+    },
+    testEg: function (a, b) {
+        return a + b;
     }
 }
-
+export {
+    productPage
+}
 $(() => {
     productPage.init();
 });

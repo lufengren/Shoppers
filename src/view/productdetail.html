@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!./share/head.html')%>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+    <%= require('html-loader!./share/header-common.html')%>
+    <%= require('html-loader!./share/navbar.html')%>
+    <div class="content pb-3">
+        <div class="container pt-3">
+            <div><a href="./index.html">Home</a> >> Product Detail</div>
+
+            <div class="product-content">
+                <!-- <div class="loading">
+                </div> -->
+                <div class="product-general-info d-flex">
+                    <div class="imgs d-flex flex-column">
+                        <div class="main-img">
+                            <a href="#">
+                                <img src='<%=require("../image/iphone-500w.jpg")%>' alt="iphone">
+                            </a>
+                        </div>
+                        <div class="thumbnail">
+                            <ul class="d-flex justify-content-between">
+                                <li><a href="#"><img src='<%=require("../image/iphone-100w.jpg")%>'
+                                            alt="iphone-small"></a></li>
+                                <li><a href="#"><img src='<%=require("../image/iphone-100w.jpg")%>'
+                                            alt="iphone-small"></a></li>
+                                <li><a href="#"><img src='<%=require("../image/iphone-100w.jpg")%>'
+                                            alt="iphone-small"></a></li>
+                                <li><a href="#"><img src='<%=require("../image/iphone-100w.jpg")%>'
+                                            alt="iphone-small"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info pl-4">
+                        <ul>
+                            <li>product name</li>
+                            <li>product subtitle</li>
+                            <li>$ 509</li>
+                            <li>quantity: <span>200</span></li>
+                            <li>add to cart</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-detail-info">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./share/footer.html')%>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-08-14 10:17:50 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-19 10:46:01
+ * @Last Modified time: 2019-08-29 17:38:52
  */
 
 import '../share/index';
@@ -26,8 +26,10 @@ import {
 import {
     sideBarInit
 } from '../share/sidebar/sidebar';
+import {
+    profileTemplate
+} from './profileTemplate';
 
-const profileTemplate = require('./profileTemplate.string');
 const profilePage = {
     init: function () {
         // headerCommonInit();

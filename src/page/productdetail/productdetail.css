@@ -1,0 +1,18 @@
+.imgs {
+    flex-basis: 40%;
+}
+
+.thumbnail li {
+    margin-top: .5rem;
+    margin-right: .5rem;
+}
+
+.thumbnail li:last-child {
+    margin-right: 0;
+}
+
+.thumbnail li:nth-child(1),
+.thumbnail li:nth-child(3) {
+    font-size: 2rem;
+    font-weight: 500;
+}

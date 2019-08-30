@@ -1,4 +1,4 @@
-<div class="shipping-address-detail py-3">
+let shippingAddressTemplate = `<div class="shipping-address-detail py-3">
     <header class="py-2"> Shipping Address <span class="pl-2 edit"><i class="far fa-edit"></i></span></header>
     <div class="form-group py-2">
         <label for="firstname"> First Name </label>
@@ -201,4 +201,5 @@
         </label>
         <input disabled type="text" id="zipcode" class="input-reset" value={{zipcode}}>
     </div>
-</div>
+</div>`;
+export {shippingAddressTemplate}

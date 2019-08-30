@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-08-15 14:45:30 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-16 13:18:13
+ * @Last Modified time: 2019-08-29 17:41:16
  */
 
 import '../share/index';
@@ -26,8 +26,10 @@ import {
 import {
     sideBarInit
 } from '../share/sidebar/sidebar';
+import {
+    shippingAddressTemplate
+} from './shippingAddressTemplate';
 
-const shippingAddressTemplate = require('./shippingAddressTemplate.string');
 const shippingAddressPage = {
     init: function () {
         // headerCommonInit();

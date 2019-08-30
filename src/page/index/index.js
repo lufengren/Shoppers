@@ -2,13 +2,13 @@
  * @Author: Lucia 
  * @Date: 2019-08-01 08:19:51 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-21 15:02:47
+ * @Last Modified time: 2019-08-26 21:36:08
  */
 
 import './index.css';
-import './carousel.css';
+import '../../util/slideshow/slideshow.css';
+import '../../util/slideshow/slideshow';
 import '../share/index';
-require('./carousel.js');
 import $ from 'jquery';
 import {
     headerCommonInit

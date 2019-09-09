@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-08-23 10:08:12 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-29 16:14:31
+ * @Last Modified time: 2019-09-05 15:28:23
  */
 
 import './pagination.css';
@@ -26,7 +26,6 @@ class Pagination {
                 return;
             }
             if (typeof _this.options.clickEvent === 'function') {
-                console.log('hithit');
                 _this.options.clickEvent($this.data('value'));
             }
         })

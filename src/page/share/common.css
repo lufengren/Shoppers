@@ -63,7 +63,7 @@ a:hover {
     border: none;
     font-size: 17px;
     color: #fff;
-    outline: none;
+    outline: none !important;
     cursor: pointer;
     text-decoration: none;
     background: rgb(245, 17, 103);
@@ -100,4 +100,10 @@ button {
 .disabled {
     color: #e6e6e6 !important;
     cursor: not-allowed !important;
+}
+
+.error-message {
+    padding: 2rem;
+    background-color: rgb(245, 17, 103);
+    color: white;
 }

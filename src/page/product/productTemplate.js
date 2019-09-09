@@ -10,6 +10,9 @@ $ {{price}}
 </div>
 </div >
 {{/lists}}
+{{^lists}}
+<p class="error-message">Sorry,we don't have this product<p>
+{{/lists}}
 </div>`;
 
 export {

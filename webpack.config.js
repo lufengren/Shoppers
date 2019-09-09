@@ -2,7 +2,7 @@
  * @Author: Lucia
  * @Date: 2019-05-20 16:08:47
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-29 21:45:18
+ * @Last Modified time: 2019-09-04 16:04:46
  */
 
 const path = require('path');
@@ -36,7 +36,8 @@ module.exports = {
         order: './src/page/order/order.js',
         about: './src/page/About/about.js',
         product: './src/page/product/product.js',
-        productdetail: './src/page/productdetail/productdetail.js'
+        productdetail: './src/page/productdetail/productdetail.js',
+        shoppingcart: './src/page/shoppingcart/shoppingcart.js'
     },
     devtool: 'inline-source-map',
     output: {
@@ -115,6 +116,7 @@ module.exports = {
         new HtmlWebpackPlugin(configHtml('order', 'order')),
         new HtmlWebpackPlugin(configHtml('About', 'About')),
         new HtmlWebpackPlugin(configHtml('product', 'product')),
-        new HtmlWebpackPlugin(configHtml('productdetail', 'productdetail'))
+        new HtmlWebpackPlugin(configHtml('productdetail', 'productdetail')),
+        new HtmlWebpackPlugin(configHtml('shoppingcart', 'shoppingcart'))
     ],
 };

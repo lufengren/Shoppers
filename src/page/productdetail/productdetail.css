@@ -11,8 +11,26 @@
     margin-right: 0;
 }
 
-.thumbnail li:nth-child(1),
-.thumbnail li:nth-child(3) {
+.info li:nth-child(1),
+.info li:nth-child(3) {
     font-size: 2rem;
     font-weight: 500;
+}
+
+.info li:nth-child(2) {
+    font-size: 1.2rem;
+}
+
+.action-icon span {
+    cursor: pointer;
+    border: 1px solid black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.product-detail-info img {
+    max-width: 100%;
+    margin-top: 2rem;
 }

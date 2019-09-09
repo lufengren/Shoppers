@@ -1,0 +1,11 @@
+.total {
+    font-weight: 700;
+}
+
+.delete {
+    padding-left: 8px;
+    padding-right: 8px;
+    background: rgb(245, 17, 103);
+    color: white;
+    border-radius: 2px;
+}

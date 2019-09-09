@@ -61,6 +61,12 @@
     color: rgb(245, 17, 103);
 }
 
+.error-message {
+    padding: 2rem;
+    background-color: rgb(245, 17, 103);
+    color: white;
+}
+
 @media only screen and (max-width:1000px) {
     .list {
         grid-template-columns: 1fr 1fr 1fr;

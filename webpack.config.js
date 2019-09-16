@@ -2,7 +2,7 @@
  * @Author: Lucia
  * @Date: 2019-05-20 16:08:47
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-09-04 16:04:46
+ * @Last Modified time: 2019-09-09 14:24:25
  */
 
 const path = require('path');
@@ -33,11 +33,11 @@ module.exports = {
         message: './src/page/message/message.js',
         profile: './src/page/profile/profile.js',
         shippingaddress: './src/page/shippingaddress/shippingaddress.js',
-        order: './src/page/order/order.js',
         about: './src/page/About/about.js',
         product: './src/page/product/product.js',
         productdetail: './src/page/productdetail/productdetail.js',
-        shoppingcart: './src/page/shoppingcart/shoppingcart.js'
+        shoppingcart: './src/page/shoppingcart/shoppingcart.js',
+        orderconfirm: './src/page/orderconfirm/orderconfirm.js'
     },
     devtool: 'inline-source-map',
     output: {
@@ -113,10 +113,10 @@ module.exports = {
         new HtmlWebpackPlugin(configHtml('forgetPassword', 'forgetPassword')),
         new HtmlWebpackPlugin(configHtml('profile', 'profile')),
         new HtmlWebpackPlugin(configHtml('shippingaddress', 'shippingaddress')),
-        new HtmlWebpackPlugin(configHtml('order', 'order')),
         new HtmlWebpackPlugin(configHtml('About', 'About')),
         new HtmlWebpackPlugin(configHtml('product', 'product')),
         new HtmlWebpackPlugin(configHtml('productdetail', 'productdetail')),
-        new HtmlWebpackPlugin(configHtml('shoppingcart', 'shoppingcart'))
+        new HtmlWebpackPlugin(configHtml('shoppingcart', 'shoppingcart')),
+        new HtmlWebpackPlugin(configHtml('orderconfirm', 'orderconfirm'))
     ],
 };

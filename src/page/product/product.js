@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-08-20 17:05:04 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-08-29 21:17:30
+ * @Last Modified time: 2019-09-16 12:22:49
  */
 
 import '../share/index';
@@ -82,22 +82,13 @@ const productPage = {
         let _this = this;
         let $productContentElement = $('.product-content');
         $productContentElement.html('<div class="loading"> </div>');
-        productService.getProducts(this.searchData, (res) => {
+        productService.getProductList(this.searchData, (res) => {
             let productHtml = utility.renderHtml(productTemplate, {
                 lists: res
             });
             $productContentElement.html(productHtml);
-            res = {
-                pages: 2,
-                pageNumber: 1,
-                prePage: 3,
-                nextPage: 5,
-                hasPreviousPage: false,
-                hasNextPage: false,
-            }
             _this.loadPagination(res);
         }, (errMsg) => {
-            console.log(errMsg);
             utility.errorMsg(errMsg);
         });
     },
@@ -120,9 +111,6 @@ const productPage = {
             }
         })
     },
-    testEg: function (a, b) {
-        return a + b;
-    }
 }
 export {
     productPage

@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-09-04 16:05:05 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-09-09 12:11:55
+ * @Last Modified time: 2019-09-09 16:10:38
  */
 
 import '../share/index';
@@ -56,7 +56,8 @@ const shoppingcartPage = {
             $amount.attr('value', currCount);
             // update cart product infomation
             cartService.updateCartProduct({
-                count: currCount productId: productId,
+                count: currCount,
+                productId: productId,
             }, function (res) {
                 _this.renderCart(res);
             }, function (errMsg) {

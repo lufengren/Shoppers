@@ -6,13 +6,6 @@
     max-width: 100%;
 }
 
-/* .list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 20px;
-} */
-
 .item {
     background: white;
     cursor: pointer;
@@ -50,21 +43,3 @@
         flex-basis: 50%;
     }
 }
-
-/* @media only screen and (max-width:1000px) {
-    .list {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media only screen and (max-width:800px) {
-    .list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media only screen and (max-width:600px) {
-    .list {
-        grid-template-columns: 1fr;
-    }
-} */

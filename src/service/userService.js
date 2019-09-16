@@ -6,7 +6,7 @@ const userService = {
     checkLogin: (resolve, reject) => {
         utility.request({
             method: 'POST',
-            url: utility.getServerUrl('/users/check_login.do'),
+            url: utility.getServerUrl('/users/checklogin'),
             success: resolve,
             error: reject
         });
@@ -14,49 +14,36 @@ const userService = {
     login: (userInfo, resolve, reject) => {
         utility.request({
             method: 'POST',
-            url: utility.getServerUrl('/users/login.do'),
-            data: userInfo,
+            url: utility.getServerUrl('/users/login'),
+            data: JSON.stringify(userInfo),
             success: resolve,
             error: reject
         });
     },
-    getUserInfo: (resolve, reject) => {
-        // utility.request({
-        //     method: 'POST',
-        //     url: utility.getServerUrl('/users/get_user_info.do'),
-        //     success: resolve,
-        //     error: reject
-        // });
-        $.ajax({
-            type: 'get',
-            url: 'http://localhost:3000/users/1',
+    getUser: (resolve, reject) => {
+        utility.request({
+            method: 'GET',
+            url: utility.getServerUrl('/users/user'),
             success: resolve,
             error: reject
         });
     },
     updateUserInfo: (userInfo, resolve, reject) => {
-        // utility.request({
-        //     method: 'POST',
-        //     url: utility.getServerUrl('/users/update_user_info.do'),
-        //     data: userInfo,
-        //     success: resolve,
-        //     error: reject
-        // });
-        $.ajax({
-            type: 'put',
-            url: utility.getServerUrl('/users/1'),
-            data: userInfo,
-            dataType: 'json',
+        utility.request({
+            method: 'PUT',
+            url: utility.getServerUrl('/users/user'),
             contentType: 'application/json',
+            data: JSON.stringify(userInfo),
             success: resolve,
             error: reject
-        })
+        });
     },
-    checkUsername: (username, resolve, reject) => {
+    checkUsername: (userInfo, resolve, reject) => {
         utility.request({
             method: 'POST',
-            url: utility.getServerUrl('/users/check_username.do'),
-            data: username,
+            url: utility.getServerUrl('/users/username'),
+            contentType: 'application/json',
+            data: JSON.stringify(userInfo),
             success: resolve,
             error: reject
         });
@@ -64,57 +51,27 @@ const userService = {
     register: (userinfo, resolve, reject) => {
         utility.request({
             method: 'POST',
-            url: utility.getServerUrl('/users/register.do'),
-            data: userinfo,
-            success: resolve,
-            error: reject
-        });
-    },
-    passwordReset: (email, resolve, reject) => {
-        utility.request({
-            method: 'POST',
-            url: utility.getServerUrl('/users/reset_password.do'),
-            data: email,
-            success: resolve,
-            error: reject
-        });
-    },
-    getShippingAddressInfo: (resolve, reject) => {
-        // utility.request({
-        //     method: 'POST',
-        //     url: utility.getServerUrl('/users/get_shipping_address_info.do'),
-        //     success: resolve,
-        //     error: reject
-        // });
-        $.ajax({
-            type: 'get',
-            url: utility.getServerUrl('/shippings/1'),
-            success: resolve,
-            error: reject
-        })
-    },
-    updateShippingAddressInfo: (shippingAddressInfo, resolve, reject) => {
-        // utility.request({
-        //     method: 'POST',
-        //     url: utility.getServerUrl('/users/update_shipping_address.do'),
-        //     data: shippingAddressInfo,
-        //     success: resolve,
-        //     error: reject
-        // });
-        $.ajax({
-            type: 'put',
-            url: utility.getServerUrl('/shippingss/1'),
-            data: shippingAddressInfo,
-            dataType: 'json',
+            url: utility.getServerUrl('/users/user'),
             contentType: 'application/json',
+            data: JSON.stringify(userinfo),
             success: resolve,
             error: reject
-        })
+        });
+    },
+    passwordReset: (userInfo, resolve, reject) => {
+        utility.request({
+            method: 'PATCH',
+            url: utility.getServerUrl('/users/user'),
+            contentType: 'application/json',
+            data: JSON.stringify(userinfo),
+            success: resolve,
+            error: reject
+        });
     },
     logout: function (resolve, reject) {
         utility.request({
             method: 'POST',
-            url: utility.getServerUrl('/users/logout.do'),
+            url: utility.getServerUrl('/users/logout'),
             success: resolve,
             error: reject
         });

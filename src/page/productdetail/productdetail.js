@@ -2,7 +2,7 @@
  * @Author: Lucia 
  * @Date: 2019-08-27 10:53:05 
  * @Last Modified by: Lucia
- * @Last Modified time: 2019-09-04 16:11:49
+ * @Last Modified time: 2019-09-16 12:23:46
  */
 
 import '../share/index';
@@ -87,7 +87,7 @@ const productDetailPage = {
         let _this = this;
         let productdetailHtml = '';
         $productContent.html('<div class="loading"></div>');
-        productService.getProductById(this.data.id, (res) => {
+        productService.getProduct(this.data.id, (res) => {
             _this.filter(res);
             _this.data.productDetail = res;
             productdetailHtml = utility.renderHtml(productdetailTemplate, res);

@@ -12,12 +12,16 @@ const shoppingcartTemplate = `{{#notEmpty}}<div class="cart-detail table-respons
     </thead>
     <tbody>
         <tr>
+        <td>
             <a href="./productdetail.html?productId={{productId}}">
                 <img src="{{imageHost}}{{productMainImage}}" alt="{{productName}}" />
             </a>
+        <td>
+        <td>
             <a href="./productdetail.html?productId={{productId}}">
                 {{productName}}
             </a>
+        </td>
             <td class="d-flex align-items-center">
                 <input type="text" size="3" value="{{quantity}}" class="amount" data-max="{{productStock}}">
                 <div class="d-flex flex-column action-icon">

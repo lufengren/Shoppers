@@ -5,34 +5,26 @@ import {
 const cartService = {
     getCartCount: function (resolve, reject) {
         utility.request({
-            method: 'POST',
-            url: utility.getServerUrl('/cart/get_cart_product_count.do'),
+            method: 'GET',
+            url: utility.getServerUrl('/cart/cartcount'),
             success: resolve,
             error: reject
         });
     },
     addToCart: function (productInfo, resolve, reject) {
-        // utility.request({
-        //     method: 'POST',
-        //     url: utility.getServerUrl('/cart/add.do'),
-        //     data: productInfo,
-        //     success: resolve,
-        //     error: reject
-        // });
-        $.ajax({
-            type: 'put',
-            url: utility.getServerUrl('/cart/add/1'),
-            data: productInfo,
-            dataType: 'json',
-            contentType: 'application/json',
+        utility.request({
+            method: 'POST',
+            url: utility.getServerUrl('/cart'),
+            contentType: 'application/json'
+            data: JSON.stringify(productInfo),
             success: resolve,
             error: reject
-        })
+        });
     },
     getCartList: function (resolve, reject) {
         utility.request({
             method: 'GET',
-            url: utility.getServerUrl('/cart/list.do'),
+            url: utility.getServerUrl('/carts'),
             success: resolve,
             error: reject
         });
@@ -40,7 +32,7 @@ const cartService = {
     updateCartProduct: function (productInfo, resolve, reject) {
         utility.request({
             method: 'PATCH',
-            url: utility.getServerUrl('/cart/update.do'),
+            url: utility.getServerUrl('/cart'),
             data: productInfo,
             success: resolve,
             error: reject
@@ -49,8 +41,7 @@ const cartService = {
     deleteCartProduct: function (productId, resolve, reject) {
         utility.request({
             method: 'DELETE',
-            url: utility.getServerUrl('/cart/delete.do'),
-            data: productId,
+            url: utility.getServerUrl(`/cart/${productId}`),
             success: resolve,
             error: reject
         });

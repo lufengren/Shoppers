@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!./share/head.html')%>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+    <%= require('html-loader!./share/messagebox.html')%>
+    <%= require('html-loader!./share/header-common.html')%>
+    <%= require('html-loader!./share/navbar.html')%>
+    <div class="content pb-3">
+        <div class="container pt-3">
+            <div class="order-content">
+                <!-- <div class="loading">
+                </div> -->
+                <div class="order-content-address">
+                    <header class="py-2"> Shipping Address </header>
+                    <div class="address-detail mt-3">
+                        <div class="p-2 address-list" data-addressid="">
+                            <div class="name">Lufeng Ren</div>
+                            <div class="address">23456 se 14th</div>
+                            <div class="phone">17523446778</div>
+                            <span class="city">Sammamish</span>
+                            <span class="state">, WA</span>
+                            <div class="zipcode">98075</div>
+                            <div class="text-right">
+                                <span><i class="far fa-edit"></i></span>
+                                <span><i class="far fa-minus-square"></i></span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <span class="add-icon"><i class="fas fa-plus"></i></span>
+                            <div>Add new shipping address</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-content-list mt-3">
+                    <header class="py-2"> Product Lists </header>
+                    <table class="table table-hover" data-productid="{{productId}}">
+                        <thead>
+                            <tr>
+                                <th>IMAGE</td>
+                                <th>DESCRIPTION</td>
+                                <th>QUANTITY</td>
+                                <th>UNIT PRICE</td>
+                                <th>TOTAL</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="./productdetail.html?productId={{productId}}" target="_blank">
+                                        <img src="{{imageHost}}{{productMainImage}}" alt="{{productName}}" />
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="./productdetail.html?productId={{productId}}" target="_blank">
+                                        TEst
+                                    </a>
+                                </td>
+                                <td>
+                                    3
+                                </td>
+                                <td>$ 12</td>
+                                <td>$ 36</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="summary d-flex align-items-center">
+                        <span class="mr-2 ml-auto">TOTAL: <span class="total">$ 400</span></span>
+                        <button class="btn checkout">
+                            SUBMIT ORDER</button>
+                    </footer>
+                </div>
+                <div class="modal-wrapper">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./share/footer.html')%>
+</body>
+
+</html>
